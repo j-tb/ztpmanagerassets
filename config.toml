@@ -9,24 +9,24 @@
   FileImagesLocation = "./images"
   DHCPDPath = "/etc/dhcp/dhcpd.conf"
   DHCPPath = "/etc/default/isc-dhcp-server"
-  DHCPIface = "ens34"
-  DomainName = "simpledemo.net"
-  DNSServers = ["8.8.8.8", "8.8.4.4"]
+  DHCPIface = "enp0s8" 
+  DomainName = "10.0.2.15"
+  DNSServers = ["10.0.2.1", "8.8.4.4"]
   DefaultLease = 600
   MaxLease = 7200
-  Subnet = "192.168.50.0"
+  Subnet = "192.168.33.0"
   SubnetMask = "255.255.255.0"
-  NonCfgRangeLow = "192.168.50.20"
-  NonCfgRangeHigh = "192.168.50.25"
-  SubnetRouter = "192.168.50.1"
-  FileServer = "192.168.50.254"
-  NTPServers = ["192.168.50.254"]
+  NonCfgRangeLow = "192.168.33.20"
+  NonCfgRangeHigh = "192.168.33.25"
+  SubnetRouter = "192.168.33.1"
+  FileServer = "10.0.2.15"
+  NTPServers = ["10.0.2.1"]
 
 [Hosts]
-  [Hosts."192.168.50.100"]
-    Ethernet = "00:0c:29:4d:3d:cc"
-    FixedIP = "192.168.50.100"
-    HostName = "demo01"
+  [Hosts."192.168.33.100"]
+    Ethernet = "08:00:27:af:a7:e9"
+    FixedIP = "192.168.33.100"
+    HostName = "srv1"
     Vendor = "junos"
     CfgImage = ""
 
